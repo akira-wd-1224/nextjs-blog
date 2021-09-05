@@ -1,19 +1,19 @@
 ---
-title: 'When to Use Static Generation v.s. Server-side Rendering'
-date: '2020-01-02'
+title: 'Vercelのプレビュー機能ためしてみたよ'
+date: '2021-09-06'
 ---
 
-We recommend using **Static Generation** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
+ページを一度作成してCDNで配信することで、リクエストごとにサーバーがページをレンダリングするよりもはるかに高速になるため、可能な限り**Static Generation**（データあり、データなし）を使用することをお勧めします。
 
-You can use Static Generation for many types of pages, including:
+Static Generationは、以下のような様々なタイプのページに使用できます。
 
-- Marketing pages
-- Blog posts
-- E-commerce product listings
-- Help and documentation
+- マーケティングページ
+- ブログ記事
+- Eコマースの製品リスト
+- ヘルプとドキュメント
 
-You should ask yourself: "Can I pre-render this page **ahead** of a user's request?" If the answer is yes, then you should choose Static Generation.
+自分自身に問いかけてみてください。「ユーザーがリクエストする前に、このページを事前にレンダリングすることはできますか？答えがイエスであれば、Static Generationを選択すべきです。
 
-On the other hand, Static Generation is **not** a good idea if you cannot pre-render a page ahead of a user's request. Maybe your page shows frequently updated data, and the page content changes on every request.
+逆に、ユーザーのリクエストに先んじてページをプリレンダリングできない場合は、Static Generationは**良いアイデアではありません**。たとえば、頻繁に更新されるデータを表示するページで、リクエストのたびにページの内容が変わるような場合です。
 
-In that case, you can use **Server-Side Rendering**. It will be slower, but the pre-rendered page will always be up-to-date. Or you can skip pre-rendering and use client-side JavaScript to populate data.
+そのような場合には、**サーバーサイドレンダリング**を使用することができます。処理速度は遅くなりますが、プリレンダリングされたページは常に最新の状態に保たれます。また、プリレンダリングを行わず、クライアントサイドJavaScriptでデータを入力することもできます。
